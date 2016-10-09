@@ -69,23 +69,23 @@ public class ExerciseRunner {
         System.out.println( toString( list6 ) );
         System.out.println( "#7 What's the highest value of all the transactions?" );
         int int7 = transactions.stream()
-                .mapToInt( Transaction::getValue )
-                .max().getAsInt();
                 // .map(Transaction::getValue)
                 // .reduce(Integer::max)
+                .mapToInt( Transaction::getValue )
+                .max().getAsInt();
         System.out.println( int7 );
         System.out.println( "#8 Find the transaction with the smallest value" );
         Transaction trans8 = transactions.stream()
-                .sorted( ( x, y ) -> Integer.compare( x.getValue(), y.getValue() ) )
-                .findFirst().get();
                 // .reduce((x1,x2) -> x1.getValue() < x2.getValue() ? x1 : x2)
                 // OR
                 // .min(Comparator.comparing(Transaction::getValue))
+                .sorted( ( x, y ) -> Integer.compare( x.getValue(), y.getValue() ) )
+                .findFirst().get();
         System.out.println( trans8 );
     }
 
     private static <T> String toString( List<T> list ) {
-        return "[" + list.stream().map( T::toString ).collect( Collectors.joining( ", " ) ) + "]";
+        return toString( list.stream() );
     }
 
     private static <T> String toString( Stream<T> list ) {
