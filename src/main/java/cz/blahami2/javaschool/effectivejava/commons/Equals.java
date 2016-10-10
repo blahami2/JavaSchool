@@ -33,4 +33,20 @@ public class Equals {
     // - extend class, add value component to equals: superclass does equal subclass, subclass does not equal superclass - broken symmetry
     // - fix symmetry by adding comparison to superclass without the added value, superclass.equals(red), superclass.equals(blue), blue does not equal red - broken transitivity
     // - there is no way to make it work? TODO
+    // - only for abstract classes and their subclasses
+    // - wrong example: java.sql.TimeStamp
+    
+    // consistent
+    // - immutable objects should remain equal for all time
+    // - mutable objects must remain equal onless one of them is changed
+    // - do not use unreliable sources for equality
+    // - wrong example: java.net.URL
+    
+    // non-nullity
+    // - reference: ==
+    // - type: instanceof // instanceof can replace nullcheck, o instanceof null return false implicitly
+    // - cast the argument to correct type
+    // - check equals of each significant field
+    // - override hashcode
+    // - TODO
 }
