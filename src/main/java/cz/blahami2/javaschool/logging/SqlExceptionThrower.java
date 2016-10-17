@@ -25,6 +25,6 @@ public class SqlExceptionThrower implements ExceptionThrower {
     }
 
     private void creator() throws SQLException {
-        throw new SQLException( "SQL exception" );
+    //    throw new SQLException( "SQL exception" );
     }
 }

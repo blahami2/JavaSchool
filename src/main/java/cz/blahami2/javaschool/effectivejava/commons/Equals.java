@@ -48,5 +48,5 @@ public class Equals {
     // - cast the argument to correct type
     // - check equals of each significant field
     // - override hashcode
-    // - TODO
+    // - dont stubstitute another type for Object (leads to overloading, not overriding)
 }
