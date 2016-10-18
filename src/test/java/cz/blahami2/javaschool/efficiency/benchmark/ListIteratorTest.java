@@ -30,7 +30,7 @@ public class ListIteratorTest {
     private final List<Integer> list;
     private final IntArrayContainer arrayContainer;
     private final IntegerArrayContainer arrayIntegerContainer;
-    private final int LIST_SIZE = 100000;
+    private final int LIST_SIZE = 1000;
     private final int RUNS = 10;
 
     public ListIteratorTest() {
