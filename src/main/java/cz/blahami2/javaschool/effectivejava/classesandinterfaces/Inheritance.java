@@ -78,5 +78,5 @@ public class Inheritance {
     
     // Design and document for inheritance or else prohibit it
     // just make it final or see item #17
-    // TODO
+    // - for each method, if it uses its other methods, document usage sequence - useful when overriding
 }

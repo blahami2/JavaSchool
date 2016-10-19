@@ -18,4 +18,22 @@ public class Hierarchy {
     // - - - create concrete implementations (for each state)
     // - - state pattern
     
+    // Favor static member classes over nonstatic
+    // - nested class should only serve its enclosing class
+    // - use nonstatic if and only if it accesses the enclosing instance
+    
+    private int encapsulated;
+    private class InnerMemberAccessorClass { // for performance reasons it is good to access members - for example iterator
+        void foo(){
+            encapsulated++;
+        }
+    }
+    
+    private static class HierarchyMessengerClass { // otherwise use static - for example Messenger pattern tied up to the given class - somewhat unique return type used only here
+        void getSmthing(){
+            // do stuff
+        }
+    }
+    
+    
 }
